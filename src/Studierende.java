@@ -3,6 +3,10 @@ public class Studierende {
     private String studiengang;
     private int matrikelnummer;
     private String frage;
+    private int sprechstundenZeit;
+    private int sprechstundenTag;
+    private int sprechstundenMonat;
+
     //private static final String DEFAULT_ANSWER = " Frage erhalten..";
 
     public Studierende(String name, String studiengang, int matrikelnummer) {
@@ -20,9 +24,19 @@ public class Studierende {
         }
         this.frage = frage;
         System.out.println(name + " fragt " + dozierender.getName() + ": " + frage);
-        dozierender.frageBeantworten(this, "");
+        //dozierender.frageBeantworten(this, "");
 
         this.frage = ""; //Clear frage
+    }
+
+    public void sprechstundenAnfrage(Dozierende dozierender, int sprechstundenTag , int sprechstundenMonat, int sprechstundenZeit) {
+        this.sprechstundenMonat = sprechstundenMonat;
+        this.sprechstundenTag = sprechstundenTag;
+        this.sprechstundenZeit = sprechstundenZeit;
+
+        System.out.println("Der Studierende " + name + " fragt eine Sprechstunde an mit dem Dozenten " +
+                dozierender.getName() + " am " + sprechstundenTag + "." + sprechstundenMonat + "." + " um " + sprechstundenZeit + " Uhr.");
+
     }
 
     public String getFrage() {
