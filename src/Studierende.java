@@ -3,7 +3,7 @@ public class Studierende {
     private String studiengang;
     private int matrikelnummer;
     private String frage;
-    private static final String DEFAULT_ANSWER = " Frage erhalten..";
+    //private static final String DEFAULT_ANSWER = " Frage erhalten..";
 
     public Studierende(String name, String studiengang, int matrikelnummer) {
         this.name = name;
@@ -12,15 +12,15 @@ public class Studierende {
         this.frage = "";
     }
 
-    public void frageStellen(Dozierender dozierender, String frage) {
+    public void frageStellen(Dozierende dozierender, String frage) {
 
         if (frage.isEmpty()) {
             System.out.println(name + " hat keine Frage gestellt.");
             return;
         }
-
+        this.frage = frage;
         System.out.println(name + " fragt " + dozierender.getName() + ": " + frage);
-        dozierender.frageBeantworten(name, DEFAULT_ANSWER);
+        dozierender.frageBeantworten(this, "");
 
         this.frage = ""; //Clear frage
     }
@@ -35,5 +35,11 @@ public class Studierende {
 
     public String getName() {
         return name;
+    }
+    public String getStudiengang() {
+        return studiengang;
+    }
+    public int getMatrikelnummer() {
+        return matrikelnummer;
     }
 }
