@@ -56,5 +56,16 @@ public class Dozierende {
         System.out.println("Anzahl Bewertungen: " + anzahlBewertungen);
         System.out.println("Durchschnittliche Bewertung: " + durchschnittBewertung);
 
+
+    }
+    public void acceptSprechstunde(Studierende student, int sprechstundenTag , int sprechstundenMonat, int sprechstundenZeit) {
+        System.out.println("--------------------");
+        System.out.println("Der Dozent " + dNamen + " akzeptiert die Sprechstunde von " + student.getName() + " am " + sprechstundenTag + "." + sprechstundenMonat + "." + " um " + sprechstundenZeit + " Uhr.");
+    }
+
+    public boolean acceptLehrveranstaltung(Studierende student, Lehrveranstaltung lehrveranstaltung) {
+        System.out.println("--------------------");
+        System.out.println("Der Dozent " + dNamen + " akzeptiert die Lehrveranstaltung: " + lehrveranstaltung.getName() + ".");
+        return true;
     }
 }
