@@ -42,6 +42,12 @@ public class Studierende {
 
     }
 
+    public void requestVorlesungsstunde(Dozierende dozierender, Lehrveranstaltung lehrveranstaltung, int datum, int uhrzeit, int raum) {
+        System.out.println("--------------------");
+        System.out.println("Der Studierende " + name + " fragt eine Vorlesungsstunde an mit dem Dozenten " +
+                dozierender.getName() + " am " + datum + " um " + uhrzeit + " Uhr im Raum " + raum);
+    }
+
     public String getFrage() {
         return frage;
     }
