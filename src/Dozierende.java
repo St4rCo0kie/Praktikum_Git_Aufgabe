@@ -65,7 +65,9 @@ public class Dozierende {
 
     public boolean acceptLehrveranstaltung(Studierende student, Lehrveranstaltung lehrveranstaltung) {
         System.out.println("--------------------");
-        System.out.println("Der Dozent " + dNamen + " akzeptiert die Lehrveranstaltung: " + lehrveranstaltung.getName() + ".");
+        System.out.println("Der Dozent " + dNamen + " akzeptiert die Lehrveranstaltung: " + lehrveranstaltung.getTitel() + ".");
         return true;
     }
+
+
 }
