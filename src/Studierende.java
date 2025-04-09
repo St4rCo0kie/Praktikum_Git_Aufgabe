@@ -19,10 +19,12 @@ public class Studierende {
     public void frageStellen(Dozierende dozierender, String frage) {
 
         if (frage.isEmpty()) {
+            System.out.println("--------------------");
             System.out.println(name + " hat keine Frage gestellt.");
             return;
         }
         this.frage = frage;
+        System.out.println("--------------------");
         System.out.println(name + " fragt " + dozierender.getName() + ": " + frage);
         //dozierender.frageBeantworten(this, "");
 
@@ -34,6 +36,7 @@ public class Studierende {
         this.sprechstundenTag = sprechstundenTag;
         this.sprechstundenZeit = sprechstundenZeit;
 
+        System.out.println("--------------------");
         System.out.println("Der Studierende " + name + " fragt eine Sprechstunde an mit dem Dozenten " +
                 dozierender.getName() + " am " + sprechstundenTag + "." + sprechstundenMonat + "." + " um " + sprechstundenZeit + " Uhr.");
 
